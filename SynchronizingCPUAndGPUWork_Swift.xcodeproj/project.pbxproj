@@ -11,15 +11,23 @@
 		1615C0E82A5D52AC0096FDB0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1615C0E72A5D52AC0096FDB0 /* ContentView.swift */; };
 		1615C0EA2A5D52AE0096FDB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1615C0E92A5D52AE0096FDB0 /* Assets.xcassets */; };
 		1615C0EE2A5D52AE0096FDB0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1615C0ED2A5D52AE0096FDB0 /* Preview Assets.xcassets */; };
+		1615C0F52A5D538C0096FDB0 /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1615C0F42A5D538C0096FDB0 /* MetalView.swift */; };
+		1615C0F72A5D53D60096FDB0 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1615C0F62A5D53D60096FDB0 /* Renderer.swift */; };
+		1615C0F92A5E1AF60096FDB0 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 1615C0F82A5E1AF50096FDB0 /* Shaders.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1615C0E22A5D52AC0096FDB0 /* SynchronizingCPUAndGPUWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SynchronizingCPUAndGPUWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1615C0E22A5D52AC0096FDB0 /* SynchronizingCPUAndGPUWork_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SynchronizingCPUAndGPUWork_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1615C0E52A5D52AC0096FDB0 /* SynchronizingCPUAndGPUWorkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynchronizingCPUAndGPUWorkApp.swift; sourceTree = "<group>"; };
 		1615C0E72A5D52AC0096FDB0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1615C0E92A5D52AE0096FDB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1615C0EB2A5D52AE0096FDB0 /* SynchronizingCPUAndGPUWork.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SynchronizingCPUAndGPUWork.entitlements; sourceTree = "<group>"; };
 		1615C0ED2A5D52AE0096FDB0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1615C0F42A5D538C0096FDB0 /* MetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
+		1615C0F62A5D53D60096FDB0 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		1615C0F82A5E1AF50096FDB0 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		1615C0FA2A5E1B9E0096FDB0 /* Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Bridge.h; path = SynchronizingCPUAndGPUWork/Bridge.h; sourceTree = SOURCE_ROOT; };
+		16DEC4E32A5E27F5002E4A9A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +44,7 @@
 		1615C0D92A5D52AC0096FDB0 = {
 			isa = PBXGroup;
 			children = (
+				16DEC4E32A5E27F5002E4A9A /* README.md */,
 				1615C0E42A5D52AC0096FDB0 /* SynchronizingCPUAndGPUWork */,
 				1615C0E32A5D52AC0096FDB0 /* Products */,
 			);
@@ -44,7 +53,7 @@
 		1615C0E32A5D52AC0096FDB0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1615C0E22A5D52AC0096FDB0 /* SynchronizingCPUAndGPUWork.app */,
+				1615C0E22A5D52AC0096FDB0 /* SynchronizingCPUAndGPUWork_Swift.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,6 +66,10 @@
 				1615C0E92A5D52AE0096FDB0 /* Assets.xcassets */,
 				1615C0EB2A5D52AE0096FDB0 /* SynchronizingCPUAndGPUWork.entitlements */,
 				1615C0EC2A5D52AE0096FDB0 /* Preview Content */,
+				1615C0F42A5D538C0096FDB0 /* MetalView.swift */,
+				1615C0F62A5D53D60096FDB0 /* Renderer.swift */,
+				1615C0F82A5E1AF50096FDB0 /* Shaders.metal */,
+				1615C0FA2A5E1B9E0096FDB0 /* Bridge.h */,
 			);
 			path = SynchronizingCPUAndGPUWork;
 			sourceTree = "<group>";
@@ -72,9 +85,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1615C0E12A5D52AC0096FDB0 /* SynchronizingCPUAndGPUWork */ = {
+		1615C0E12A5D52AC0096FDB0 /* SynchronizingCPUAndGPUWork_Swift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1615C0F12A5D52AE0096FDB0 /* Build configuration list for PBXNativeTarget "SynchronizingCPUAndGPUWork" */;
+			buildConfigurationList = 1615C0F12A5D52AE0096FDB0 /* Build configuration list for PBXNativeTarget "SynchronizingCPUAndGPUWork_Swift" */;
 			buildPhases = (
 				1615C0DE2A5D52AC0096FDB0 /* Sources */,
 				1615C0DF2A5D52AC0096FDB0 /* Frameworks */,
@@ -84,9 +97,9 @@
 			);
 			dependencies = (
 			);
-			name = SynchronizingCPUAndGPUWork;
+			name = SynchronizingCPUAndGPUWork_Swift;
 			productName = SynchronizingCPUAndGPUWork;
-			productReference = 1615C0E22A5D52AC0096FDB0 /* SynchronizingCPUAndGPUWork.app */;
+			productReference = 1615C0E22A5D52AC0096FDB0 /* SynchronizingCPUAndGPUWork_Swift.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -104,7 +117,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1615C0DD2A5D52AC0096FDB0 /* Build configuration list for PBXProject "SynchronizingCPUAndGPUWork" */;
+			buildConfigurationList = 1615C0DD2A5D52AC0096FDB0 /* Build configuration list for PBXProject "SynchronizingCPUAndGPUWork_Swift" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -117,7 +130,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1615C0E12A5D52AC0096FDB0 /* SynchronizingCPUAndGPUWork */,
+				1615C0E12A5D52AC0096FDB0 /* SynchronizingCPUAndGPUWork_Swift */,
 			);
 		};
 /* End PBXProject section */
@@ -139,8 +152,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1615C0F72A5D53D60096FDB0 /* Renderer.swift in Sources */,
+				1615C0F52A5D538C0096FDB0 /* MetalView.swift in Sources */,
 				1615C0E82A5D52AC0096FDB0 /* ContentView.swift in Sources */,
 				1615C0E62A5D52AC0096FDB0 /* SynchronizingCPUAndGPUWorkApp.swift in Sources */,
+				1615C0F92A5E1AF60096FDB0 /* Shaders.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +303,7 @@
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = SynchronizingCPUAndGPUWork/Bridge.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -323,6 +340,7 @@
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = SynchronizingCPUAndGPUWork/Bridge.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -331,7 +349,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1615C0DD2A5D52AC0096FDB0 /* Build configuration list for PBXProject "SynchronizingCPUAndGPUWork" */ = {
+		1615C0DD2A5D52AC0096FDB0 /* Build configuration list for PBXProject "SynchronizingCPUAndGPUWork_Swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1615C0EF2A5D52AE0096FDB0 /* Debug */,
@@ -340,7 +358,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1615C0F12A5D52AE0096FDB0 /* Build configuration list for PBXNativeTarget "SynchronizingCPUAndGPUWork" */ = {
+		1615C0F12A5D52AE0096FDB0 /* Build configuration list for PBXNativeTarget "SynchronizingCPUAndGPUWork_Swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1615C0F22A5D52AE0096FDB0 /* Debug */,
